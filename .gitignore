@@ -1,0 +1,28 @@
+# Environment variables
+.env
+
+# Composer dependencies
+vendor/
+
+# Logs and temporary files
+*.log
+*.cache
+*.tmp
+
+# IDE/Editor files
+.idea/
+.vscode/
+*.sublime-*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# PHPUnit or other testing artifacts
+phpunit.xml
+tests/_output/
+tests/_support/_generated/
+
+# Local database dumps or backups
+*.sql
+*.sql.gz
