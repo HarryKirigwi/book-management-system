@@ -1,1 +1,244 @@
- 
+ /* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto:wght@300;400;700&display=swap');
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 1rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.05), transparent 60%),
+              radial-gradient(circle at bottom left, rgba(99, 102, 241, 0.05), transparent 60%);
+  z-index: -1;
+}
+
+/* Main Container */
+.auth-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 2rem);
+}
+
+/* Header */
+.auth-header {
+  text-align: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+/* Main Content */
+.auth-main {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.auth-form-section {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.error-message {
+  background: rgba(185, 28, 28, 0.1);
+  color: #fecaca;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border-left: 3px solid #dc2626;
+  margin-bottom: 1.5rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.success-message {
+  background: rgba(21, 128, 61, 0.1);
+  color: #bbf7d0;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border-left: 3px solid #16a34a;
+  margin-bottom: 1.5rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  color: #f8fafc;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  background: rgba(30, 41, 59, 0.5);
+  color: #e2e8f0;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  font-family: 'Roboto', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 5px rgba(56, 189, 248, 0.3);
+}
+
+/* Buttons */
+.btn {
+  padding: 0.625rem 1.25rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #1e40af;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  font-size: clamp(0.75rem, 2vw, 0.8rem);
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: #2563eb;
+}
+
+.btn-submit {
+  background-color: #0891b2;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-submit:hover {
+  background-color: #06b6d4;
+}
+
+/* Register Link */
+.register-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  color: #94a3b8;
+}
+
+.register-link a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(99, 102, 241, 0.1);
+  font-size: clamp(0.8rem, 2vw, 0.85rem);
+  color: #64748b;
+}
+
+/* Password Group */
+.password-group {
+    position: relative;
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 2.5rem; /* Space for the toggle button */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: #38bdf8;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .auth-container {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .auth-container {
+    border-radius: 8px;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .auth-form {
+    gap: 1rem;
+  }
+}
