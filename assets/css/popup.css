@@ -1,0 +1,18 @@
+/* Success Popup */
+.success-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(21, 128, 61, 0.9);
+    color: #bbf7d0;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    border: 1px solid #16a34a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    text-align: center;
+    max-width: 90%;
+}
